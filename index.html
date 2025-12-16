@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaynan Monteiro | Análise de Dados & Tecnologia</title>
+    <meta name="description" content="Portfólio de Kaynan Monteiro, estudante de ADS. Foco em análise de dados, automação (Python, SQL, VBA, JavaScript) e arranjos musicais.">
+    
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script>
+        // Evita flash de tema claro ao carregar
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark-mode');
+            document.body.classList.add('dark-mode');
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Kaynan Monteiro da Silva",
+      "alternateName": "Kaynan Monteiro",
+      "jobTitle": ["Estudante de Análise e Desenvolvimento de Sistemas", "Analista de Dados", "Músico Arranjador"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pindoretama",
+        "addressRegion": "CE",
+        "addressCountry": "BR"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/kaynan-monteiro-2a855b256",
+        "https://github.com/kaynanmonteiro10",
+        "https://audio.com/kaynan-monteiro"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+    <header id="main-header">
+        <div class="container header-content">
+            <div class="logo animate-on-scroll">Kaynan Monteiro</div>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#artigos">Artigos</a></li>
+                    <li><a href="#contato" class="btn-contact">Contato</a></li>
+                </ul>
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo noturno">
+                    <span id="theme-icon">🌙</span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <canvas id="tech-hero-canvas"></canvas>
+        <div class="container hero-content">
+            <div class="hero-text animate-on-scroll">
+                <h1>Olá, eu sou <span class="highlight">Kaynan Monteiro</span>.</h1>
+                <h2>Analista de Dados & Músico.</h2>
+                <p>Unindo análise lógica, automação de processos e criatividade musical para criar soluções tecnológicas eficientes.</p>
+                <a href="#portfolio" class="btn-primary">Ver meus projetos</a>
+            </div>
+            <div class="hero-image animate-on-scroll">
+                <img src="assets/minha-foto.png" alt="Foto de Kaynan Monteiro">
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Sobre Mim</h2>
+            <div class="about-content animate-on-scroll">
+                <p>Sou natural e residente de **Pindoretama – CE**. Atualmente, sou estudante de **Análise e Desenvolvimento de Sistemas**, com foco direcionado para análise de dados, automação de processos e criação de soluções tecnológicas de baixo custo.</p>
+                
+                <p>Minha atuação técnica envolve o uso das seguintes ferramentas:</p>
+                <div class="skills-container">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">VBA / Excel</span>
+                    <span class="skill-badge">JavaScript</span>
+                    <span class="skill-badge">Power BI</span>
+                    <span class="skill-badge">Git / GitHub</span>
+                    <span class="skill-badge">Linux</span>
+                    <span class="skill-badge">Automação</span>
+                    <span class="skill-badge">Análise de Dados</span>
+                </div>
+
+                <p>Paralelamente, sou **músico instrumentista e arranjador**. Essa dualidade me permite trazer criatividade, sensibilidade e um pensamento interdisciplinar como diferencial na construção de soluções técnicas e analíticas complexas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Meu Portfólio</h2>
+            <p class="section-subtitle animate-on-scroll">Uma seleção dos meus trabalhos focados em automação, dados e música.</p>
+
+            <h3 class="category-title animate-on-scroll">Tecnologia, Automação & Dados</h3>
+            <div class="project-grid">
+                
+                <div class="project-card animate-on-scroll">
+                    <h4>Relatório de Cargas Niterói</h4>
+                    <div class="tech-stack">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Jupyter Notebook</span>
+                        <span class="skill-badge">Análise de Dados</span>
+                    </div>
+                    <p>Projeto focado na análise de dados e geração de insights sobre relatórios de cargas.</p>
+                    <a href="https://github.com/kaynanmonteiro10/RelatorioCargasNiteroi" target="_blank">Ver no GitHub →</a>
+                </div>
+
+                 <div class="project-card animate-on-scroll">
+                    <div class="carousel-container">
+                        <img src="assets/PdfFusion.png" class="carousel-slide active" alt="Tela principal do PdfFusion">
+                        <img src="assets/PdfFusion1.png" class="carousel-slide" alt="Funcionalidade 1 do PdfFusion">
+                        <img src="assets/PdfFusion2.png" class="carousel-slide" alt="Funcionalidade 2 do PdfFusion">
+                        <button class="carousel-btn prev">&#10094;</button>
+                        <button class="carousel-btn next">&#10095;</button>
+                    </div>
+                    <h4>Juntar PDF (Automação)</h4>
+                    <div class="tech-stack">
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Automação</span>
+                        <span class="skill-badge">PyPDF2</span>
+                    </div>
+                    <p>Ferramenta prática desenvolvida para automatizar o processo de unir múltiplos arquivos PDF em um único documento.</p>
+                    <a href="https://github.com/kaynanmonteiro10/ProjetoJuntarPdf" target="_blank">Ver no GitHub →</a>
+                </div>
+
+                 <div class="project-card animate-on-scroll">
+                    <div class="carousel-container">
+                        <img src="assets/Kfinance.png" class="carousel-slide active" alt="Tela principal do K-Finance">
+                        <img src="assets/Kfinance1.png" class="carousel-slide" alt="Tela de cadastro do K-Finance">
+                        <img src="assets/Kfinance2.png" class="carousel-slide" alt="Relatórios do K-Finance">
+                        <button class="carousel-btn prev">&#10094;</button>
+                        <button class="carousel-btn next">&#10095;</button>
+                    </div>
+                    <h4>K-Finance</h4>
+                    <div class="tech-stack">
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">POO</span>
+                        <span class="skill-badge">Sistema Financeiro</span>
+                    </div>
+                    <p>Sistema de controle financeiro pessoal, demonstrando conhecimentos em Java e arquitetura de software.</p>
+                    <a href="https://github.com/kaynanmonteiro10/K-Finance" target="_blank">Ver no GitHub →</a>
+                </div>
+            </div>
+
+            <h3 class="category-title mt-large animate-on-scroll">Arranjos Musicais</h3>
+            <div class="project-grid">
+                <div class="project-card music-card animate-on-scroll">
+                    <h4>Meu Perfil no Audio.com</h4>
+                    <p>Confira meus arranjos, composições e produções musicais mais recentes. A criatividade que complementa minha lógica analítica.</p>
+                    <a href="https://audio.com/kaynan-monteiro" target="_blank">Ouvir Arranjos →</a>
+                </div>
+
+                <div class="project-card music-card animate-on-scroll">
+                    <h4>Tico-Tico no Fubá (Arranjo)</h4>
+                    <p>Minha interpretação e arranjo para este clássico da música brasileira, demonstrando técnica e sensibilidade musical.</p>
+                    <a href="https://music.apple.com/ca/album/tico-tico-no-fub%C3%A1-cover-single/1847927975" target="_blank">Ouvir no Apple Music →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="artigos" class="section-padding">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Publicações & Casos Reais</h2>
+            <div class="articles-list animate-on-scroll">
+                <article>
+                    <h3>
+                        <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_em-meu-primeiro-m%C3%AAs-na-empresa-percebi-activity-7402762241902678017-9ysG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8V_OAB3BiBrlFqY0pHCGLnk90chYiD6l0" target="_blank">
+                            Caso Real: Notificações Inteligentes de WhatsApp com JavaScript
+                        </a>
+                    </h3>
+                    <p class="article-meta">Publicado no LinkedIn</p>
+                    <p>Em meu primeiro mês, identifiquei a necessidade de monitorar clientes no WhatsApp. Desenvolvi uma extensão do Chrome usando apenas JavaScript para criar notificações inteligentes, aumentando a agilidade e produtividade da equipe de atendimento.</p>
+                    <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_em-meu-primeiro-m%C3%AAs-na-empresa-percebi-activity-7402762241902678017-9ysG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8V_OAB3BiBrlFqY0pHCGLnk90chYiD6l0" target="_blank" style="font-size: 0.9rem; font-weight: 600;">Ler relato completo no LinkedIn →</a>
+                </article>
+
+                <article>
+                    <h3>
+                        <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_automaaexaeto-excelvba-produtividade-activity-7252695666588549122-c77t" target="_blank">
+                            Caso Real: Automação de Processos com Excel e VBA
+                        </a>
+                    </h3>
+                    <p class="article-meta">Publicado no LinkedIn</p>
+                    <p>Relato sobre como a aplicação de automação com VBA e uso avançado do Excel resultou em ganhos significativos de produtividade e eficiência em processos de negócio.</p>
+                    <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_automaaexaeto-excelvba-produtividade-activity-7252695666588549122-c77t" target="_blank" style="font-size: 0.9rem; font-weight: 600;">Ler relato completo no LinkedIn →</a>
+                </article>
+                
+                 <article>
+                    <h3>A Existência de Deus: Uma Análise Interdisciplinar</h3>
+                    <p class="article-meta">Autor: Kaynan Monteiro da Silva | Data: 17 de Junho de 2025</p>
+                    <p>Este artigo explora a possibilidade da existência de Deus a partir de uma perspectiva interdisciplinar, integrando fundamentos da matemática, biologia, lógica modal e filosofia.</p>
+                    <div style="margin-top: 15px;">
+                        <a href="meu-artigo.pdf" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.9rem; margin-right: 10px;">Visualizar PDF</a>
+                        <a href="meu-artigo.pdf" download class="btn-contact" style="padding: 8px 15px; font-size: 0.9rem;">Baixar PDF</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="bonus-game" class="section-padding">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Bônus: Space Dev Defense</h2>
+            <p class="section-subtitle">Teste sua velocidade de digitação! Destrua as palavras tecnológicas antes que elas atinjam sua base. (Disponível em PC/Tablet)</p>
+
+            <div class="game-container-wrapper">
+                <div id="game-ui-bar">
+                    <div class="ui-box">Score: <span id="typer-score">0</span></div>
+                    <div class="ui-box">Nível: <span id="typer-level">1</span></div>
+                </div>
+                <canvas id="typer-canvas" width="600" height="400"></canvas>
+                <div class="game-controls">
+                    <p id="game-over-message"></p>
+                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: inherit;">Digite as palavras que caem para atirar.</p>
+                    <button id="start-typer-btn" class="btn-primary">Iniciar Missão</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section-padding bg-dark">
+        <div class="container contact-content animate-on-scroll">
+            <h2 class="section-title text-white">Vamos Conversar?</h2>
+            <p class="text-white">Estou aberto a oportunidades em análise de dados, automação e colaborações musicais.</p>
+            
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/in/kaynan-monteiro-2a855b256" target="_blank" class="btn-contact-big">LinkedIn</a>
+                <a href="https://github.com/kaynanmonteiro10" target="_blank" class="btn-contact-big">GitHub</a>
+                <a href="mailto:seuemail@email.com" class="btn-contact-big">E-mail</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Kaynan Monteiro. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 1. Rolagem Suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // 2. Carrossel de Imagens
+        document.querySelectorAll('.carousel-container').forEach(carousel => {
+            const slides = carousel.querySelectorAll('.carousel-slide');
+            const prevBtn = carousel.querySelector('.carousel-btn.prev');
+            const nextBtn = carousel.querySelector('.carousel-btn.next');
+            let currentSlide = 0;
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                slides[currentSlide].classList.add('active');
+            }
+            nextBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length; showSlide(currentSlide);
+            });
+            prevBtn.addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length; showSlide(currentSlide);
+            });
+            showSlide(0);
+        });
+
+        // 3. Modo Noturno Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'dark') { themeIcon.textContent = '☀️'; }
+        themeToggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark'); themeIcon.textContent = '☀️';
+            } else {
+                localStorage.setItem('theme', 'light'); themeIcon.textContent = '🌙';
+            }
+            if (typeof initCanvas === 'function') initCanvas(); 
+        });
+
+        // 4. Animações de Scroll
+        const scrollElements = document.querySelectorAll(".animate-on-scroll");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        scrollElements.forEach((el) => observer.observe(el));
+
+        // 5. Animação de Fundo Tecnológico (Canvas)
+        const canvas = document.getElementById('tech-hero-canvas');
+        const ctx = canvas.getContext('2d');
+        let particlesArray;
+        function getParticleColor() { return getComputedStyle(document.body).getPropertyValue('--particles-color').trim(); }
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        class Particle {
+            constructor(x, y, directionX, directionY, size, color) {
+                this.x = x; this.y = y; this.directionX = directionX; this.directionY = directionY; this.size = size; this.color = color;
+            }
+            draw() {
+                ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false); ctx.fillStyle = this.color; ctx.fill();
+            }
+            update() {
+                if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+                if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+                this.x += this.directionX; this.y += this.directionY; this.draw();
+            }
+        }
+        function initCanvas() {
+            particlesArray = [];
+            let numberOfParticles = (canvas.height * canvas.width) / 15000; 
+            let color = getParticleColor();
+            for (let i = 0; i < numberOfParticles; i++) {
+                let size = (Math.random() * 2) + 1;
+                let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                let directionX = (Math.random() * 0.4) - 0.2; let directionY = (Math.random() * 0.4) - 0.2;
+                particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
+            }
+        }
+        function connect() {
+            let color = getParticleColor(); let rgbValues = color.match(/\d+/g); 
+            for (let a = 0; a < particlesArray.length; a++) {
+                for (let b = a; b < particlesArray.length; b++) {
+                    let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x)) + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                    if (distance < (canvas.width/7) * (canvas.height/7)) {
+                        let opacityValue = 1 - (distance / 15000);
+                        ctx.strokeStyle = `rgba(${rgbValues[0]}, ${rgbValues[1]}, ${rgbValues[2]}, ${opacityValue})`;
+                        ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(particlesArray[a].x, particlesArray[a].y); ctx.lineTo(particlesArray[b].x, particlesArray[b].y); ctx.stroke();
+                    }
+                }
+            }
+        }
+        function animateCanvas() {
+            requestAnimationFrame(animateCanvas); ctx.clearRect(0, 0, innerWidth, innerHeight);
+            for (let i = 0; i < particlesArray.length; i++) { particlesArray[i].update(); }
+            connect();
+        }
+        initCanvas(); animateCanvas();
+        window.addEventListener('resize', () => { canvas.width = innerWidth; canvas.height = innerHeight; initCanvas(); });
+
+        // ==========================================
+        // 6. Jogo de Digitação (CORRIGIDO: Target Locking)
+        // ==========================================
+        (function() {
+            const canvas = document.getElementById('typer-canvas');
+            const ctx = canvas.getContext('2d');
+            const startBtn = document.getElementById('start-typer-btn');
+            const scoreEl = document.getElementById('typer-score');
+            const levelEl = document.getElementById('typer-level');
+            const msgEl = document.getElementById('game-over-message');
+            let score = 0; let level = 1; let gameRunning = false;
+            let spawnRate = 2000; let fallSpeed = 1; let lastSpawnTime = 0; let animationId;
+            const techWords = ['PYTHON','JAVA','SQL','DADOS','VBA','EXCEL','HTML','CSS','REACT','NODE','GIT','GITHUB','CLOUD','AWS','AZURE','DOCKER','LINUX','SERVER','API','JSON','SCRUM','AGILE','DEPLOY','FRONTEND','BACKEND','FULLSTACK','DEV','CODE','DEBUG','AUTOMACAO','SCRIPT','PANDAS','NUMPY','JUPYTER','ANALISE','BI','POWERBI','TABLEAU','MACHINE','LEARNING','IA','BIGDATA','ETL','PIPELINE'];
+            let activeWords = [];
+            // (NOVO) Variável para travar a mira em uma palavra
+            let lockedTarget = null;
+
+            class FallingWord {
+                constructor(text, x, y) { this.text = text; this.x = x; this.y = y; this.typedIndex = 0; this.finished = false; }
+                draw() {
+                    ctx.font = 'bold 24px Courier New, monospace';
+                    ctx.fillStyle = '#aaaaaa'; ctx.fillText(this.text, this.x, this.y);
+                    if (this.typedIndex > 0) {
+                        const typedPart = this.text.substring(0, this.typedIndex);
+                        ctx.fillStyle = '#C0A375'; ctx.shadowColor = '#C0A375'; ctx.shadowBlur = 15;
+                        ctx.fillText(typedPart, this.x, this.y); ctx.shadowBlur = 0;
+                    }
+                }
+                update() {
+                    this.y += fallSpeed;
+                    // Se a palavra travada sair da tela, destrava
+                    if (this === lockedTarget && this.y > canvas.height) { lockedTarget = null; }
+                    if (this.y > canvas.height - 20) { gameOver(); }
+                }
+            }
+
+            function drawShip() {
+                const shipX = canvas.width / 2; const shipY = canvas.height - 30;
+                ctx.fillStyle = '#C0A375'; ctx.beginPath(); ctx.moveTo(shipX, shipY); ctx.lineTo(shipX - 20, shipY + 30); ctx.lineTo(shipX + 20, shipY + 30); ctx.closePath(); ctx.fill();
+                ctx.fillStyle = '#2C3E50'; ctx.beginPath(); ctx.arc(shipX, shipY + 20, 8, 0, Math.PI * 2); ctx.fill();
+            }
+            function shootLaser(targetX, targetY) {
+                ctx.strokeStyle = '#C0A375'; ctx.lineWidth = 3; ctx.shadowColor = '#C0A375'; ctx.shadowBlur = 20;
+                ctx.beginPath(); ctx.moveTo(canvas.width / 2, canvas.height - 40); ctx.lineTo(targetX + 20, targetY - 10); ctx.stroke(); ctx.shadowBlur = 0; ctx.lineWidth = 1;
+            }
+            function spawnWord() {
+                const text = techWords[Math.floor(Math.random() * techWords.length)];
+                const x = Math.random() * (canvas.width - 150) + 20;
+                activeWords.push(new FallingWord(text, x, -20));
+            }
+            function gameLoop(timestamp) {
+                if (!gameRunning) return;
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                if (timestamp - lastSpawnTime > spawnRate) { spawnWord(); lastSpawnTime = timestamp; }
+                activeWords.forEach((word, index) => {
+                    word.update(); word.draw();
+                    if (word.finished) { activeWords.splice(index, 1); }
+                });
+                drawShip();
+                if (gameRunning) { animationId = requestAnimationFrame(gameLoop); }
+            }
+            function levelUp() {
+                level++; fallSpeed += 0.2; spawnRate = Math.max(800, spawnRate - 200); levelEl.innerText = level;
+            }
+            function gameOver() {
+                gameRunning = false; lockedTarget = null; cancelAnimationFrame(animationId);
+                ctx.fillStyle = 'rgba(0,0,0,0.8)'; ctx.fillRect(0, 0, canvas.width, canvas.height);
+                ctx.font = 'bold 40px Montserrat, sans-serif'; ctx.fillStyle = '#ff4757'; ctx.textAlign = 'center'; ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2);
+                msgEl.innerText = `Missão falhou! Score Final: ${score}. Tente novamente.`;
+                startBtn.innerText = 'Reiniciar Missão'; startBtn.style.display = 'inline-block';
+            }
+            function startGame() {
+                if (gameRunning) return;
+                activeWords = []; lockedTarget = null; score = 0; level = 1; fallSpeed = 1; spawnRate = 2000;
+                scoreEl.innerText = score; levelEl.innerText = level; msgEl.innerText = '';
+                gameRunning = true; lastSpawnTime = performance.now();
+                startBtn.style.display = 'none'; window.focus(); requestAnimationFrame(gameLoop);
+            }
+
+            // Função auxiliar para processar o acerto
+            function processCorrectHit(word) {
+                word.typedIndex++;
+                shootLaser(word.x, word.y);
+                if (word.typedIndex === word.text.length) {
+                    word.finished = true;
+                    score += word.text.length * 10;
+                    scoreEl.innerText = score;
+                    if (score > 0 && score % 200 === 0) levelUp();
+                    lockedTarget = null; // Destrava quando termina a palavra
+                }
+            }
+
+            // Lógica de Controle com Trava de Mira
+            document.addEventListener('keydown', (e) => {
+                if (!gameRunning) return;
+                const pressedKey = e.key.toUpperCase();
+                
+                // 1. Se já temos um alvo travado, só verifica ele
+                if (lockedTarget) {
+                    if (lockedTarget.text[lockedTarget.typedIndex] === pressedKey) {
+                        processCorrectHit(lockedTarget);
+                    }
+                    return; // Ignora outras palavras se já estiver travado
+                }
+
+                // 2. Se não temos alvo, procura o mais próximo do chão que começa com a letra
+                let potentialTargets = activeWords
+                    .filter(w => w.typedIndex === 0 && w.text.startsWith(pressedKey))
+                    .sort((a, b) => b.y - a.y);
+
+                if (potentialTargets.length > 0) {
+                    lockedTarget = potentialTargets[0]; // Trava no mais próximo
+                    processCorrectHit(lockedTarget);
+                }
+            });
+
+            startBtn.addEventListener('click', startGame);
+            drawShip();
+            ctx.font = '20px Montserrat, sans-serif'; ctx.fillStyle = '#ffffff'; ctx.textAlign = 'center'; ctx.fillText('Clique em Iniciar Missão', canvas.width/2, canvas.height/2);
+        })();
+    </script>
+</body>
+</html>

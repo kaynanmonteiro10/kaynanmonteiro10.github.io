@@ -1,0 +1,260 @@
+/* =========================================
+   1. Variáveis Globais e Temas
+========================================= */
+
+/* --- TEMA CLARO (Padrão) --- */
+:root {
+    --primary-color: #2C3E50;
+    --secondary-color: #C0A375; /* Dourado */
+    --secondary-color-rgb: 192, 163, 117; /* Para efeitos de transparência */
+    
+    --bg-body: #ffffff;
+    --bg-light-section: #f8f9fa;
+    --bg-card: #ffffff;
+    
+    --text-color-main: #333333;
+    --text-color-muted: #666666;
+    --text-light: #ffffff;
+    
+    --border-color: #eeeeee;
+    --shadow-color: rgba(0,0,0,0.05);
+    
+    --particles-color: rgba(44, 62, 80, 0.3); 
+
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+/* --- TEMA ESCURO --- */
+body.dark-mode {
+    --primary-color: #a4b0be;
+    --secondary-color: #d4af37;
+    --secondary-color-rgb: 212, 175, 55;
+    
+    /* (NOVO) Fundo com gradiente sutil animado */
+    --bg-body: linear-gradient(135deg, #121212, #1a1a2e);
+    --bg-light-section: #1e1e1e;
+    --bg-card: #252525;
+    
+    --text-color-main: #e0e0e0;
+    --text-color-muted: #aaaaaa;
+    
+    --border-color: #333333;
+    --shadow-color: rgba(0,0,0,0.3);
+    
+    --particles-color: rgba(255, 255, 255, 0.15);
+}
+
+/* --- Ajustes Específicos do Modo Escuro --- */
+body.dark-mode .logo,
+body.dark-mode nav ul li a,
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4 { color: var(--text-color-main); }
+body.dark-mode #main-header { background-color: rgba(30, 30, 30, 0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+body.dark-mode #hero { background: transparent; } /* Fica transparente para mostrar o gradiente do body */
+body.dark-mode .hero-text h2,
+body.dark-mode .project-card p, 
+body.dark-mode .article-meta { color: var(--text-color-muted); }
+body.dark-mode .project-card { border-top: 3px solid var(--secondary-color); } 
+body.dark-mode .skill-badge { background-color: #333; color: var(--text-color-main); border-color: #444; }
+body.dark-mode .carousel-container { border-color: var(--border-color); background-color: #333; }
+body.dark-mode .bg-dark { background-color: #1a1a1a; } 
+body.dark-mode #bonus-game h2, body.dark-mode #bonus-game p { color: #fff; }
+
+/* =========================================
+   2. Reset e Estilos Base
+========================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color-main);
+    background: var(--bg-body); /* Background pode ser cor ou gradiente */
+    background-size: 400% 400%; /* Para animação do gradiente */
+    transition: background 0.5s ease, color 0.3s ease;
+}
+/* (NOVO) Animação sutil do fundo no modo escuro */
+body.dark-mode { animation: gradientBG 15s ease infinite; }
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --- Utilitários --- */
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
+.section-padding { padding: 80px 0; }
+.bg-light { background-color: var(--bg-light-section); transition: background-color 0.3s ease; }
+.bg-dark { background-color: #2C3E50; }
+.text-white { color: var(--text-light); }
+.highlight { color: var(--secondary-color); }
+.mt-large { margin-top: 60px; }
+
+/* Tipografia */
+h1, h2, h3, h4 { font-family: var(--font-heading); color: var(--primary-color); margin-bottom: 1rem; transition: color 0.3s ease; }
+h1 { font-size: 3rem; line-height: 1.2; }
+h2.section-title { font-size: 2.2rem; text-align: center; margin-bottom: 40px; position: relative;}
+h2.section-title::after { content: ''; display: block; width: 60px; height: 3px; background-color: var(--secondary-color); margin: 15px auto 0; }
+.section-subtitle { text-align: center; margin-bottom: 50px; font-size: 1.1rem; }
+.category-title { font-size: 1.5rem; border-left: 4px solid var(--secondary-color); padding-left: 15px; margin-bottom: 30px; }
+a { text-decoration: none; color: var(--primary-color); transition: color 0.3s ease; }
+a:hover { color: var(--secondary-color); }
+
+/* --- Botões --- */
+.btn-primary, .btn-contact, .btn-contact-big {
+    display: inline-block; padding: 12px 24px; background-color: var(--secondary-color); color: var(--text-light); border-radius: 4px; font-weight: 600; transition: all 0.3s ease; border: 2px solid var(--secondary-color);
+}
+.btn-primary:hover { background-color: transparent; color: var(--secondary-color); }
+.btn-contact { background-color: transparent; border: 2px solid var(--secondary-color); color: var(--secondary-color); }
+.btn-contact:hover { background-color: var(--secondary-color); color: var(--text-light); }
+.btn-contact-big { background-color: transparent; border: 2px solid var(--secondary-color); color: var(--text-light); margin: 10px; font-size: 1.1rem;}
+.btn-contact-big:hover { background-color: var(--secondary-color); color: #fff; box-shadow: 0 0 15px rgba(var(--secondary-color-rgb), 0.4);}
+
+/* =========================================
+   3. Componentes e Seções
+========================================= */
+
+/* --- Header --- */
+#main-header { padding: 20px 0; position: fixed; width: 100%; top: 0; background-color: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; transition: all 0.3s ease; }
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--primary-color); transition: color 0.3s ease; }
+nav { display: flex; align-items: center; }
+nav ul { list-style: none; display: flex; align-items: center; }
+nav ul li { margin-left: 30px; }
+nav ul li a { font-weight: 500; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; position: relative; }
+/* Efeito de sublinhado no menu */
+nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--secondary-color); transition: width 0.3s ease; }
+nav ul li a:hover::after { width: 100%; }
+
+.theme-toggle-btn { background: none; border: none; cursor: pointer; font-size: 1.2rem; margin-left: 25px; color: var(--primary-color); transition: all 0.3s ease; }
+.theme-toggle-btn:hover { transform: rotate(20deg) scale(1.1); color: var(--secondary-color); }
+
+/* --- Hero Section --- */
+#hero {
+    min-height: 100vh; display: flex; align-items: center; padding-top: 80px;
+    background: linear-gradient(to right, var(--bg-body) 50%, var(--bg-light-section) 50%);
+    transition: background 0.3s ease; position: relative; overflow: hidden;
+}
+#tech-hero-canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.hero-content { display: flex; align-items: center; justify-content: space-between; position: relative; z-index: 1; }
+.hero-text { flex: 1; padding-right: 50px; }
+.hero-text h2 { font-family: var(--font-body); font-weight: 300; color: var(--text-color-muted); }
+.hero-image { flex: 1; text-align: center; }
+.hero-image img { width: 80%; max-width: 400px; border-radius: 50%; border: 5px solid var(--secondary-color); box-shadow: 0 10px 30px rgba(var(--secondary-color-rgb), 0.3); transition: transform 0.3s ease; }
+.hero-image img:hover { transform: scale(1.02); }
+
+/* --- Sobre Mim --- */
+.about-content p { margin-bottom: 20px; font-size: 1.1rem; }
+
+/* --- Portfólio Grid (Com novo efeito de Hover) --- */
+.project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.project-card {
+    background: var(--bg-card); padding: 30px; border-radius: 12px; /* Bordas mais arredondadas */
+    box-shadow: 0 5px 15px var(--shadow-color); transition: all 0.3s ease;
+    border-top: 3px solid var(--primary-color); display: flex; flex-direction: column;
+}
+/* (NOVO) Efeito de "Glow" ao passar o mouse */
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(var(--secondary-color-rgb), 0.15);
+    border-top-color: var(--secondary-color);
+}
+.music-card { border-top-color: var(--secondary-color); }
+.project-card h4 { margin-bottom: 10px; }
+.project-card p { margin-bottom: 20px; font-size: 0.95rem; color: var(--text-color-muted); flex-grow: 1; }
+
+/* --- Artigos --- */
+.articles-list article { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; transition: transform 0.3s ease; }
+.articles-list article:hover { transform: translateX(10px); } /* Pequeno movimento ao passar o mouse */
+.articles-list h3 a { font-size: 1.4rem; }
+.article-meta { font-size: 0.85rem; color: var(--text-color-muted); margin-bottom: 10px; }
+
+/* --- Contato --- */
+.contact-content { text-align: center; }
+.contact-content p { margin-bottom: 40px; font-size: 1.2rem; }
+.contact-links { display: flex; justify-content: center; flex-wrap: wrap;}
+
+/* --- Footer --- */
+footer { text-align: center; padding: 30px 0; background-color: #1a1a1a; color: #666; font-size: 0.9rem; }
+
+/* =========================================
+   4. Módulos Especiais
+========================================= */
+/* Badges */
+.skills-container { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 15px; margin-bottom: 20px; }
+.skill-badge { background-color: #e9ecef; color: #2C3E50; padding: 6px 14px; border-radius: 50px; font-size: 0.85rem; font-weight: 600; border: 1px solid var(--border-color); transition: all 0.3s ease; cursor: default; }
+.skill-badge:hover { background-color: var(--secondary-color); color: #ffffff; border-color: var(--secondary-color); transform: translateY(-2px); box-shadow: 0 5px 10px rgba(var(--secondary-color-rgb), 0.2); }
+.project-card .tech-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+.project-card .skill-badge { font-size: 0.75rem; padding: 4px 10px; background-color: var(--bg-light-section); }
+
+/* Carrossel */
+.carousel-container { position: relative; width: 100%; height: 180px; margin-bottom: 15px; border-radius: 8px; overflow: hidden; border: 1px solid var(--border-color); background-color: var(--bg-light-section); }
+.carousel-slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 0.4s ease-in-out; }
+.carousel-slide.active { opacity: 1; z-index: 1; }
+.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background-color: rgba(0, 0, 0, 0.3); color: white; border: none; cursor: pointer; z-index: 2; font-size: 18px; border-radius: 50%; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; opacity: 0; transition: all 0.3s; backdrop-filter: blur(5px); }
+.carousel-container:hover .carousel-btn { opacity: 1; }
+.carousel-btn:hover { background-color: var(--secondary-color); transform: translateY(-50%) scale(1.1); }
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.project-card > img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; border: 1px solid var(--border-color); }
+.project-card > a > img { margin-bottom: 0; }
+
+/* Animações de Scroll */
+.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+.animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+.project-grid .project-card:nth-child(2) { transition-delay: 0.2s; }
+.project-grid .project-card:nth-child(3) { transition-delay: 0.4s; }
+
+/* Jogo de Digitação */
+#bonus-game {
+    text-align: center;
+    background: linear-gradient(to bottom, var(--bg-light-section), #0f0f1a); 
+    border-top: 1px solid var(--border-color); color: var(--text-color-main); transition: background 0.3s ease;
+}
+#bonus-game h2, #bonus-game p { transition: color 0.3s ease; }
+.game-container-wrapper { display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 30px; }
+#game-ui-bar { display: flex; gap: 20px; font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; font-family: monospace; }
+.ui-box { background: rgba(0,0,0,0.6); padding: 5px 15px; border-radius: 4px; border: 1px solid var(--secondary-color); color: #fff; backdrop-filter: blur(5px); }
+#typer-canvas {
+    background-color: #000000;
+    background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px), radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px), radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 20px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    border: 3px solid var(--secondary-color); box-shadow: 0 0 30px rgba(var(--secondary-color-rgb), 0.4);
+    border-radius: 8px; cursor: crosshair; max-width: 100%; height: auto;
+}
+.game-controls { margin-top: 20px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+#start-typer-btn { font-size: 1.1rem; padding: 12px 40px; }
+#game-over-message { color: #ff4757; font-weight: bold; font-size: 1.2rem; min-height: 1.8rem; }
+
+/* =========================================
+   5. Responsividade Aprimorada
+========================================= */
+@media (max-width: 992px) {
+    h1 { font-size: 2.5rem; }
+    .hero-text { padding-right: 30px; }
+}
+
+@media (max-width: 768px) {
+    .section-padding { padding: 60px 0; }
+    .header-content { flex-direction: column; padding: 15px 0; }
+    nav { margin-top: 15px; }
+    nav ul { flex-wrap: wrap; justify-content: center; gap: 10px; }
+    nav ul li { margin: 0; }
+    .theme-toggle-btn { margin-left: 15px; }
+    
+    #hero { height: auto; padding: 140px 0 60px; background: var(--bg-light-section); text-align: center;}
+    .hero-content { flex-direction: column-reverse; }
+    .hero-text { padding-right: 0; margin-top: 40px; }
+    .hero-image img { width: 50%; max-width: 250px; }
+    h1 { font-size: 2.2rem; }
+    h2.section-title { font-size: 1.8rem; }
+    
+    /* Esconde o jogo em tablets pequenos e celulares */
+    #bonus-game { display: none; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 1.8rem; }
+    .btn-contact-big { width: 100%; margin: 5px 0; }
+    .contact-links { flex-direction: column; }
+}
