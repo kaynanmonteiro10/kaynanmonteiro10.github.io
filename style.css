@@ -162,6 +162,7 @@ nav ul li a:hover::after { width: 100%; }
 .music-card { border-top-color: var(--secondary-color); }
 .project-card h4 { margin-bottom: 10px; }
 .project-card p { margin-bottom: 20px; font-size: 0.95rem; color: var(--text-color-muted); flex-grow: 1; }
+.project-card > a { display: block; margin-top: 8px; font-weight: 600; }
 
 /* --- Artigos --- */
 .articles-list article { margin-bottom: 30px; border-bottom: 1px solid var(--border-color); padding-bottom: 20px; transition: transform 0.3s ease; }
