@@ -30,7 +30,7 @@
     <nav><ul>
       <li><a href="#sobre">Sobre</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#stack">Stack</a></li><li><a href="#artigos">Conteúdo</a></li>
       <li><a href="#contato" class="nav-cta">Vamos conversar</a></li>
-    </ul><button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo noturno"><span id="theme-icon">◐</span></button></nav>
+    </ul><button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo noturno"><span id="theme-icon">◐</span></button><button class="mobile-menu-btn" aria-label="Abrir menu">☰</button></nav>
   </div>
 </header>
 <main>
@@ -309,6 +309,10 @@
             ctx.font = '20px Montserrat, sans-serif'; ctx.fillStyle = '#ffffff'; ctx.textAlign = 'center'; ctx.fillText('Clique em Iniciar Missão', canvas.width/2, canvas.height/2);
         })();
         // Microinterações da vitrine: progresso, navegação ativa, filtros, contadores e profundidade.
+        const mobileMenuButton = document.querySelector('.mobile-menu-btn');
+        const mobileNav = document.querySelector('nav');
+        mobileMenuButton?.addEventListener('click', () => { mobileNav.classList.toggle('mobile-open'); mobileMenuButton.textContent = mobileNav.classList.contains('mobile-open') ? '×' : '☰'; });
+        document.querySelectorAll('nav a').forEach(link => link.addEventListener('click', () => { mobileNav?.classList.remove('mobile-open'); if (mobileMenuButton) mobileMenuButton.textContent = '☰'; }));
         const progressBar = document.querySelector('.scroll-progress span');
         const sections = [...document.querySelectorAll('main section[id]')];
         const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
