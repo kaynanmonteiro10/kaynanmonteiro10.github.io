@@ -4,281 +4,76 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="9kjfYfgTGkYHtow82k4vOs3hcZXv6G2IuwH9xzfN-OE" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaynan Monteiro | Dados, Automação & Desenvolvimento Web</title>
-    <meta name="description" content="Portfólio de Kaynan Monteiro: analista de dados e desenvolvedor de soluções práticas com Python, JavaScript, SQL e automação.">
-    
+    <title>Kaynan Monteiro | Produtos digitais, dados e automação</title>
+    <meta name="description" content="Portfólio de Kaynan Monteiro: produtos digitais, automação, análise de dados e experiências web construídas para resolver problemas reais.">
+    <meta property="og:title" content="Kaynan Monteiro | Produtos digitais, dados e automação">
+    <meta property="og:description" content="Uma seleção de produtos, ferramentas e sistemas desenvolvidos por Kaynan Monteiro.">
+    <meta property="og:image" content="assets/projects/k-finance.png">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="stylesheet" href="style.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <script>
-        // Evita flash de tema claro ao carregar
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.classList.add('dark-mode');
-            document.body.classList.add('dark-mode');
-        }
+        if (localStorage.getItem('theme') === 'dark') document.documentElement.classList.add('dark-mode');
+        window.addEventListener('DOMContentLoaded', () => { if (localStorage.getItem('theme') === 'dark') document.body.classList.add('dark-mode'); });
     </script>
-
     <script type="application/ld+json">
-    {
-      "@context": "http://schema.org",
-      "@type": "Person",
-      "name": "Kaynan Monteiro da Silva",
-      "alternateName": "Kaynan Monteiro",
-      "jobTitle": ["Estudante de Análise e Desenvolvimento de Sistemas", "Analista de Dados", "Músico Arranjador"],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Pindoretama",
-        "addressRegion": "CE",
-        "addressCountry": "BR"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/in/kaynan-monteiro-2a855b256",
-        "https://github.com/kaynanmonteiro10",
-        "https://audio.com/kaynan-monteiro"
-      ]
-    }
+    {"@context":"https://schema.org","@type":"Person","name":"Kaynan Monteiro da Silva","alternateName":"Kaynan Monteiro","jobTitle":"Analista de Dados e Desenvolvedor de Produtos Digitais","address":{"@type":"PostalAddress","addressLocality":"Pindoretama","addressRegion":"CE","addressCountry":"BR"},"sameAs":["https://www.linkedin.com/in/kaynan-monteiro-2a855b256","https://github.com/kaynanmonteiro10","https://audio.com/kaynan-monteiro"]}
     </script>
 </head>
 <body>
-
-    <header id="main-header">
-        <div class="container header-content">
-            <div class="logo animate-on-scroll">Kaynan Monteiro</div>
-            <nav>
-                <ul>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#portfolio">Portfólio</a></li>
-                    <li><a href="#artigos">Artigos</a></li>
-                    <li><a href="#contato" class="btn-contact">Contato</a></li>
-                </ul>
-                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo noturno">
-                    <span id="theme-icon">🌙</span>
-                </button>
-            </nav>
-        </div>
-    </header>
-
-    <section id="hero">
-        <canvas id="tech-hero-canvas"></canvas>
-        <div class="container hero-content">
-            <div class="hero-text animate-on-scroll">
-                <h1>Olá, eu sou <span class="highlight">Kaynan Monteiro</span>.</h1>
-                <h2>Dados, automação e produtos digitais.</h2>
-                <p>Crio soluções práticas para transformar processos, organizar informações e tornar a tecnologia mais útil no dia a dia.</p>
-                <a href="#portfolio" class="btn-primary">Ver meus projetos</a>
-            </div>
-            <div class="hero-image animate-on-scroll">
-                <img src="assets/minha-foto.png" alt="Foto de Kaynan Monteiro">
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="section-padding">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Sobre Mim</h2>
-            <div class="about-content animate-on-scroll">
-                <p>Sou de Pindoretama – CE e estudante de Análise e Desenvolvimento de Sistemas. Minha atuação combina análise de dados, automação de processos e desenvolvimento web para transformar necessidades reais em soluções simples, acessíveis e funcionais.</p>
-                
-                <p>Minha atuação técnica envolve o uso das seguintes ferramentas:</p>
-                <div class="skills-container">
-                    <span class="skill-badge">Python</span>
-                    <span class="skill-badge">SQL</span>
-                    <span class="skill-badge">VBA / Excel</span>
-                    <span class="skill-badge">JavaScript</span>
-                    <span class="skill-badge">TypeScript</span>
-                    <span class="skill-badge">React</span>
-                    <span class="skill-badge">Power BI</span>
-                    <span class="skill-badge">Git / GitHub</span>
-                    <span class="skill-badge">Linux</span>
-                    <span class="skill-badge">Automação</span>
-                    <span class="skill-badge">Desenvolvimento Web</span>
-                    <span class="skill-badge">Análise de Dados</span>
-                </div>
-
-                <p>Também sou músico instrumentista e arranjador. Essa experiência fortalece minha criatividade, atenção aos detalhes e capacidade de enxergar problemas por diferentes perspectivas.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Meu Portfólio</h2>
-            <p class="section-subtitle animate-on-scroll">Projetos recentes em desenvolvimento web, automação, dados e produtividade.</p>
-
-            <h3 class="category-title animate-on-scroll">Tecnologia, Automação & Dados</h3>
-            <div class="project-grid">
-                <div class="project-card animate-on-scroll">
-                    <h4>Portal Rede Saúde</h4>
-                    <div class="tech-stack">
-                        <span class="skill-badge">Python</span>
-                        <span class="skill-badge">Web</span>
-                        <span class="skill-badge">Deploy</span>
-                    </div>
-                    <p>Aplicação web voltada para organizar e facilitar processos de uma rede de saúde, com versão publicada para demonstração.</p>
-                    <a href="https://portalredeusaude.vercel.app" target="_blank" rel="noopener">Ver demonstração →</a>
-                    <a href="https://github.com/kaynanmonteiro10/portalredeusaude" target="_blank" rel="noopener">Ver código no GitHub →</a>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <h4>Nivelo</h4>
-                    <div class="tech-stack">
-                        <span class="skill-badge">TypeScript</span>
-                        <span class="skill-badge">Web</span>
-                        <span class="skill-badge">Produto digital</span>
-                    </div>
-                    <p>Projeto web recente com foco em uma experiência digital organizada, responsiva e pronta para ser explorada online.</p>
-                    <a href="https://nivelo-seven.vercel.app" target="_blank" rel="noopener">Ver demonstração →</a>
-                    <a href="https://github.com/kaynanmonteiro10/Nivelo" target="_blank" rel="noopener">Ver código no GitHub →</a>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <h4>Comissões</h4>
-                    <div class="tech-stack">
-                        <span class="skill-badge">HTML</span>
-                        <span class="skill-badge">CSS</span>
-                        <span class="skill-badge">JavaScript</span>
-                    </div>
-                    <p>Ferramenta web para apoiar o controle e a visualização de comissões, com foco em praticidade para rotinas administrativas.</p>
-                    <a href="https://github.com/kaynanmonteiro10/Comiss-es" target="_blank" rel="noopener">Ver no GitHub →</a>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="carousel-container">
-                        <img src="assets/PdfFusion.png" class="carousel-slide active" alt="Tela principal do PDF Fusion">
-                        <img src="assets/PdfFusion1.png" class="carousel-slide" alt="Funcionalidade do PDF Fusion">
-                        <img src="assets/PdfFusion2.png" class="carousel-slide" alt="Processamento no PDF Fusion">
-                        <button class="carousel-btn prev">&#10094;</button>
-                        <button class="carousel-btn next">&#10095;</button>
-                    </div>
-                    <h4>PDF Fusion</h4>
-                    <div class="tech-stack">
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">PDF-lib</span>
-                        <span class="skill-badge">PWA</span>
-                    </div>
-                    <p>Aplicação web que une arquivos PDF diretamente no navegador, com drag and drop, reordenação e processamento local.</p>
-                    <a href="https://pdf-fusion-iota.vercel.app" target="_blank" rel="noopener">Ver demonstração →</a>
-                    <a href="https://github.com/kaynanmonteiro10/PDF-Fusion" target="_blank" rel="noopener">Ver código no GitHub →</a>
-                </div>
-
-                <div class="project-card animate-on-scroll">
-                    <div class="carousel-container">
-                        <img src="assets/Kfinance.png" class="carousel-slide active" alt="Tela principal do K-Finance">
-                        <img src="assets/Kfinance1.png" class="carousel-slide" alt="Tela de cadastro do K-Finance">
-                        <img src="assets/Kfinance2.png" class="carousel-slide" alt="Relatórios do K-Finance">
-                        <button class="carousel-btn prev">&#10094;</button>
-                        <button class="carousel-btn next">&#10095;</button>
-                    </div>
-                    <h4>K-Finance</h4>
-                    <div class="tech-stack">
-                        <span class="skill-badge">JavaScript</span>
-                        <span class="skill-badge">Finanças</span>
-                        <span class="skill-badge">Dashboard</span>
-                    </div>
-                    <p>Sistema web de gestão financeira pessoal com dashboard, categorias, cartões e acompanhamento de receitas e despesas.</p>
-                    <a href="https://k-finance-kappa.vercel.app" target="_blank" rel="noopener">Ver demonstração →</a>
-                    <a href="https://github.com/kaynanmonteiro10/K-Finance" target="_blank" rel="noopener">Ver código no GitHub →</a>
-                </div>
-            </div>
-
-            <h3 class="category-title mt-large animate-on-scroll">Arranjos Musicais</h3>
-            <div class="project-grid">
-                <div class="project-card music-card animate-on-scroll">
-                    <h4>Meu Perfil no Audio.com</h4>
-                    <p>Confira meus arranjos, composições e produções musicais mais recentes. A criatividade que complementa minha lógica analítica.</p>
-                    <a href="https://audio.com/kaynan-monteiro" target="_blank">Ouvir Arranjos →</a>
-                </div>
-
-                <div class="project-card music-card animate-on-scroll">
-                    <h4>Tico-Tico no Fubá (Arranjo)</h4>
-                    <p>Minha interpretação e arranjo para este clássico da música brasileira, demonstrando técnica e sensibilidade musical.</p>
-                    <a href="https://music.apple.com/ca/album/tico-tico-no-fub%C3%A1-cover-single/1847927975" target="_blank">Ouvir no Apple Music →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="artigos" class="section-padding">
-        <div class="container">
-            <h2 class="section-title animate-on-scroll">Publicações & Casos Reais</h2>
-            <div class="articles-list animate-on-scroll">
-                <article>
-                    <h3>
-                        <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_em-meu-primeiro-m%C3%AAs-na-empresa-percebi-activity-7402762241902678017-9ysG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8V_OAB3BiBrlFqY0pHCGLnk90chYiD6l0" target="_blank">
-                            Caso Real: Notificações Inteligentes de WhatsApp com JavaScript
-                        </a>
-                    </h3>
-                    <p class="article-meta">Publicado no LinkedIn</p>
-                    <p>Em meu primeiro mês, identifiquei a necessidade de monitorar clientes no WhatsApp. Desenvolvi uma extensão do Chrome usando apenas JavaScript para criar notificações inteligentes, aumentando a agilidade e produtividade da equipe de atendimento.</p>
-                    <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_em-meu-primeiro-m%C3%AAs-na-empresa-percebi-activity-7402762241902678017-9ysG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD8V_OAB3BiBrlFqY0pHCGLnk90chYiD6l0" target="_blank" style="font-size: 0.9rem; font-weight: 600;">Ler relato completo no LinkedIn →</a>
-                </article>
-
-                <article>
-                    <h3>
-                        <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_automaaexaeto-excelvba-produtividade-activity-7252695666588549122-c77t" target="_blank">
-                            Caso Real: Automação de Processos com Excel e VBA
-                        </a>
-                    </h3>
-                    <p class="article-meta">Publicado no LinkedIn</p>
-                    <p>Relato sobre como a aplicação de automação com VBA e uso avançado do Excel resultou em ganhos significativos de produtividade e eficiência em processos de negócio.</p>
-                    <a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_automaaexaeto-excelvba-produtividade-activity-7252695666588549122-c77t" target="_blank" style="font-size: 0.9rem; font-weight: 600;">Ler relato completo no LinkedIn →</a>
-                </article>
-                
-                 <article>
-                    <h3>A Existência de Deus: Uma Análise Interdisciplinar</h3>
-                    <p class="article-meta">Autor: Kaynan Monteiro da Silva | Data: 17 de Junho de 2025</p>
-                    <p>Este artigo explora a possibilidade da existência de Deus a partir de uma perspectiva interdisciplinar, integrando fundamentos da matemática, biologia, lógica modal e filosofia.</p>
-                    <div style="margin-top: 15px;">
-                        <a href="meu-artigo.pdf" target="_blank" class="btn-primary" style="padding: 8px 15px; font-size: 0.9rem; margin-right: 10px;">Visualizar PDF</a>
-                        <a href="meu-artigo.pdf" download class="btn-contact" style="padding: 8px 15px; font-size: 0.9rem;">Baixar PDF</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="bonus-game" class="section-padding">
-        <div class="container animate-on-scroll">
-            <h2 class="section-title">Bônus: Space Dev Defense</h2>
-            <p class="section-subtitle">Teste sua velocidade de digitação! Destrua as palavras tecnológicas antes que elas atinjam sua base. (Disponível em PC/Tablet)</p>
-
-            <div class="game-container-wrapper">
-                <div id="game-ui-bar">
-                    <div class="ui-box">Score: <span id="typer-score">0</span></div>
-                    <div class="ui-box">Nível: <span id="typer-level">1</span></div>
-                </div>
-                <canvas id="typer-canvas" width="600" height="400"></canvas>
-                <div class="game-controls">
-                    <p id="game-over-message"></p>
-                    <p style="margin-bottom: 5px; font-size: 0.9rem; color: inherit;">Digite as palavras que caem para atirar.</p>
-                    <button id="start-typer-btn" class="btn-primary">Iniciar Missão</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contato" class="section-padding bg-dark">
-        <div class="container contact-content animate-on-scroll">
-            <h2 class="section-title text-white">Vamos Conversar?</h2>
-            <p class="text-white">Estou aberto a oportunidades em análise de dados, automação e colaborações musicais.</p>
-            
-            <div class="contact-links">
-                <a href="https://www.linkedin.com/in/kaynan-monteiro-2a855b256" target="_blank" class="btn-contact-big">LinkedIn</a>
-                <a href="https://github.com/kaynanmonteiro10" target="_blank" class="btn-contact-big">GitHub</a>
-                <a href="mailto:kaynanmont455@gmail.com" class="btn-contact-big">E-mail</a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Kaynan Monteiro. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+<header id="main-header">
+  <div class="container header-content">
+    <a class="logo" href="#inicio"><span class="logo-mark">K</span><span>Kaynan<span class="logo-dot">.</span></span></a>
+    <nav><ul>
+      <li><a href="#sobre">Sobre</a></li><li><a href="#projetos">Projetos</a></li><li><a href="#stack">Stack</a></li><li><a href="#artigos">Conteúdo</a></li>
+      <li><a href="#contato" class="nav-cta">Vamos conversar</a></li>
+    </ul><button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar modo noturno"><span id="theme-icon">◐</span></button></nav>
+  </div>
+</header>
+<main>
+<section id="inicio" class="hero-section">
+  <canvas id="tech-hero-canvas"></canvas>
+  <div class="container hero-layout">
+    <div class="hero-copy animate-on-scroll">
+      <p class="eyebrow"><span class="eyebrow-line"></span>ANALISTA DE DADOS · BUILDER · CRIADOR</p>
+      <h1>Eu transformo<br><span class="highlight">problemas reais</span><br>em produtos úteis.</h1>
+      <p class="hero-lead">Do processo manual ao produto digital: crio ferramentas que organizam a operação, revelam dados e tornam o trabalho mais simples.</p>
+      <div class="hero-actions"><a href="#projetos" class="btn-primary">Explorar projetos <span>↗</span></a><a href="https://github.com/kaynanmonteiro10" target="_blank" rel="noopener" class="text-link">Ver GitHub <span>↗</span></a></div>
+      <div class="hero-proof"><span class="proof-dot"></span><span>Disponível para projetos em dados, automação e web</span></div>
+    </div>
+    <div class="hero-visual animate-on-scroll"><div class="portrait-frame"><img src="assets/minha-foto.png" alt="Kaynan Monteiro"/><div class="portrait-tag">Pindoretama · CE</div></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="code-float"><span>const</span> ideas = <b>build</b>();</div></div>
+  </div>
+  <div class="hero-scroll">SCROLL PARA EXPLORAR <span>↓</span></div>
+</section>
+<section class="metric-strip"><div class="container metrics"><div><strong>17</strong><span>repositórios públicos</span></div><div><strong>05</strong><span>produtos com demo online</span></div><div><strong>04</strong><span>frentes de atuação</span></div><div><strong>∞</strong><span>curiosidade para construir</span></div></div></section>
+<section id="sobre" class="section-padding about-section"><div class="container split-layout"><div class="section-intro animate-on-scroll"><p class="eyebrow">01 / SOBRE O TRABALHO</p><h2>Mais do que código.<br><em>Clareza.</em></h2><p class="intro-note">Tecnologia boa é aquela que reduz atrito e ajuda alguém a decidir melhor.</p></div><div class="about-content animate-on-scroll"><p>Sou Kaynan Monteiro, estudante de Análise e Desenvolvimento de Sistemas e analista de TI. Trabalho na interseção entre <b>dados, automação e desenvolvimento web</b>, criando soluções práticas para rotinas que antes dependiam de planilhas, mensagens e tarefas repetitivas.</p><p>Minha forma de construir combina visão de produto, atenção à experiência de quem usa e gosto por aprender fazendo. O resultado são ferramentas que vão de portais editoriais e PWAs a dashboards financeiros, utilitários e automações de operação.</p><div class="about-foot"><span>Baseado em Pindoretama, CE</span><span>ADS · Unicesumar</span><span>Músico e arranjador</span></div></div></div></section>
+<section id="projetos" class="section-padding projects-section"><div class="container"><div class="section-heading-row animate-on-scroll"><div><p class="eyebrow">02 / TRABALHOS SELECIONADOS</p><h2>Projetos que saíram<br><em>do papel.</em></h2></div><p class="heading-aside">Uma seleção do que venho construindo: produtos que resolvem uma tarefa específica, experiências que podem ser usadas e sistemas pensados para crescer.</p></div>
+<div class="featured-grid">
+  <article class="featured-card featured-wide animate-on-scroll"><a href="https://portalredeusaude.vercel.app" target="_blank" rel="noopener" class="project-image"><img src="assets/projects/portal-rede-saude.png" alt="Tela do Portal Rede Saúde"><span class="image-label">DEMO ONLINE ↗</span></a><div class="project-body"><div class="project-kicker">01 · OPERAÇÃO & DADOS</div><h3>Portal Rede Saúde</h3><p>Uma aplicação para organizar demandas, acompanhar prioridades, registrar tempo e gerar relatórios exportáveis — levando uma rotina operacional para um fluxo digital mais claro.</p><div class="tag-row"><span>Python</span><span>Relatórios</span><span>Automação</span></div><a class="card-link" href="https://github.com/kaynanmonteiro10/portalredeusaude" target="_blank" rel="noopener">Ver arquitetura no GitHub ↗</a></div></article>
+  <article class="featured-card animate-on-scroll"><a href="https://nivelo-seven.vercel.app" target="_blank" rel="noopener" class="project-image"><img src="assets/projects/nivelo.png" alt="Tela do Nivelo"><span class="image-label">DEMO ONLINE ↗</span></a><div class="project-body"><div class="project-kicker">02 · PRODUTO DIGITAL</div><h3>Nivelo</h3><p>Portal editorial de empresas, serviços e conteúdos com busca, páginas legíveis e uma experiência pensada para descoberta.</p><div class="tag-row"><span>Next.js</span><span>React</span><span>TypeScript</span></div><a class="card-link" href="https://github.com/kaynanmonteiro10/Nivelo" target="_blank" rel="noopener">Ver projeto ↗</a></div></article>
+  <article class="featured-card animate-on-scroll"><a href="https://k-finance-kappa.vercel.app" target="_blank" rel="noopener" class="project-image"><img src="assets/projects/k-finance.png" alt="Tela do K-Finance"><span class="image-label">DEMO ONLINE ↗</span></a><div class="project-body"><div class="project-kicker">03 · FINANÇAS PESSOAIS</div><h3>K-Finance</h3><p>Gestão financeira com dashboard, categorias, cartões, gráficos, relatórios e exportação para Excel.</p><div class="tag-row"><span>JavaScript</span><span>Chart.js</span><span>SheetJS</span></div><a class="card-link" href="https://github.com/kaynanmonteiro10/K-Finance" target="_blank" rel="noopener">Ver projeto ↗</a></div></article>
+  <article class="featured-card animate-on-scroll"><a href="https://pdf-fusion-iota.vercel.app" target="_blank" rel="noopener" class="project-image"><img src="assets/projects/pdf-fusion.png" alt="Tela do PDF Fusion"><span class="image-label">DEMO ONLINE ↗</span></a><div class="project-body"><div class="project-kicker">04 · PRODUTIVIDADE</div><h3>PDF Fusion</h3><p>Une arquivos PDF no navegador com drag and drop, reordenação, temas e processamento local — sem enviar documentos para um servidor.</p><div class="tag-row"><span>JavaScript</span><span>PDF-lib</span><span>Privacy by design</span></div><a class="card-link" href="https://github.com/kaynanmonteiro10/PDF-Fusion" target="_blank" rel="noopener">Ver projeto ↗</a></div></article>
+</div>
+<div class="projects-cta animate-on-scroll"><span>Quer ver a coleção completa?</span><a href="#ecosistema" class="btn-outline">Explorar todos os projetos ↓</a></div>
+</div></section>
+<section id="ecosistema" class="section-padding ecosystem-section"><div class="container"><div class="section-heading-row compact animate-on-scroll"><div><p class="eyebrow">03 / ECOSSISTEMA</p><h2>Uma ideia puxa<br><em>outra.</em></h2></div><p class="heading-aside">Além dos destaques, mantenho uma coleção de projetos menores, experimentos e produtos independentes.</p></div><div class="ecosystem-grid">
+<a class="mini-project animate-on-scroll" href="https://kaynanmonteiro10.github.io/K-memo/" target="_blank" rel="noopener"><img src="assets/projects/k-memo.png" alt="Ícone K-memo"><div><span class="mini-type">PWA · OFFLINE</span><h3>K-memo</h3><p>Caderno financeiro com planejamento, privacidade, backup e relatórios.</p><span class="mini-link">Abrir projeto ↗</span></div></a>
+<a class="mini-project animate-on-scroll" href="https://github.com/kaynanmonteiro10/K-Calculator" target="_blank" rel="noopener"><img src="assets/projects/k-calculator.png" alt="Ícone K-Calculator"><div><span class="mini-type">PWA · UTILITÁRIO</span><h3>K-Calculator</h3><p>35 calculadoras especializadas em seis categorias, com modelo freemium.</p><span class="mini-link">Ver no GitHub ↗</span></div></a>
+<a class="mini-project animate-on-scroll" href="https://github.com/kaynanmonteiro10/AltarSecreto" target="_blank" rel="noopener"><img src="assets/projects/altar-secreto.png" alt="Ícone Altar Secreto"><div><span class="mini-type">PWA · ESPIRITUALIDADE</span><h3>Altar Secreto</h3><p>Bíblia, orações, diário e reflexão espiritual com recursos offline.</p><span class="mini-link">Ver no GitHub ↗</span></div></a>
+<a class="mini-project animate-on-scroll" href="https://sistema-de-lembretes-ecru.vercel.app" target="_blank" rel="noopener"><img src="assets/projects/lembretes.png" alt="Tela do Sistema de Lembretes"><div><span class="mini-type">WEB APP</span><h3>Sistema de Lembretes</h3><p>Uma ferramenta simples para organizar lembretes e não perder o essencial.</p><span class="mini-link">Abrir demo ↗</span></div></a>
+<a class="mini-project no-image animate-on-scroll" href="https://github.com/kaynanmonteiro10/Comiss-es" target="_blank" rel="noopener"><div><span class="mini-type">WEB · OPERAÇÃO</span><h3>Comissões</h3><p>Interface para apoiar o controle e a visualização de comissões.</p><span class="mini-link">Ver no GitHub ↗</span></div></a>
+<a class="mini-project no-image animate-on-scroll" href="https://github.com/kaynanmonteiro10/ProjetoJuntarPdf" target="_blank" rel="noopener"><div><span class="mini-type">PYTHON · DESKTOP</span><h3>JuntarPDF</h3><p>Aplicativo Windows para unir, ordenar e preparar documentos PDF.</p><span class="mini-link">Ver no GitHub ↗</span></div></a>
+<a class="mini-project no-image animate-on-scroll" href="https://github.com/kaynanmonteiro10/RelatorioCargasNiteroi" target="_blank" rel="noopener"><div><span class="mini-type">PYTHON · DADOS</span><h3>Relatório de Cargas</h3><p>Automação e tratamento de relatórios para gerar informação mais útil.</p><span class="mini-link">Ver no GitHub ↗</span></div></a>
+<a class="mini-project no-image animate-on-scroll" href="https://github.com/kaynanmonteiro10/K-FinanceChatBot" target="_blank" rel="noopener"><div><span class="mini-type">EXPERIMENTO · IA</span><h3>K-Finance ChatBot</h3><p>Exploração de uma experiência conversacional aplicada à organização financeira.</p><span class="mini-link">Ver no GitHub ↗</span></div></a>
+</div></div></section>
+<section id="stack" class="section-padding stack-section"><div class="container split-layout"><div class="section-intro animate-on-scroll"><p class="eyebrow">04 / COMO POSSO AJUDAR</p><h2>Da ideia à<br><em>entrega.</em></h2><p class="intro-note">Uma combinação de pensamento analítico, execução e cuidado com quem está do outro lado da tela.</p></div><div class="service-list animate-on-scroll"><div class="service-item"><span>01</span><div><h3>Automação de processos</h3><p>Menos tarefas repetitivas, mais tempo para o que exige decisão. Python, JavaScript, Excel e integrações.</p></div></div><div class="service-item"><span>02</span><div><h3>Dados que orientam</h3><p>Organização, tratamento, relatórios e dashboards para transformar informação espalhada em visão de negócio.</p></div></div><div class="service-item"><span>03</span><div><h3>Produtos web úteis</h3><p>Interfaces responsivas, PWAs e ferramentas digitais com foco em clareza, acessibilidade e uso real.</p></div></div><div class="service-item"><span>04</span><div><h3>Protótipos que aprendem</h3><p>Validação rápida de ideias com entregas funcionais, documentação e espaço para evoluir.</p></div></div></div></div></section>
+<section id="artigos" class="section-padding articles-section"><div class="container"><div class="section-heading-row compact animate-on-scroll"><div><p class="eyebrow">05 / CONTEÚDO</p><h2>Construir também<br>é <em>compartilhar.</em></h2></div></div><div class="articles-list animate-on-scroll"><article><p class="article-number">01</p><div><p class="article-meta">CASO REAL · LINKEDIN</p><h3><a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_em-meu-primeiro-m%C3%AAs-na-empresa-percebi-activity-7402762241902678017-9ysG" target="_blank" rel="noopener">Notificações inteligentes de WhatsApp com JavaScript</a></h3><p>Uma extensão do Chrome criada para acompanhar clientes e aumentar a agilidade da equipe de atendimento.</p></div><a class="article-arrow" href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_em-meu-primeiro-m%C3%AAs-na-empresa-percebi-activity-7402762241902678017-9ysG" target="_blank" rel="noopener">↗</a></article><article><p class="article-number">02</p><div><p class="article-meta">PRODUTIVIDADE · LINKEDIN</p><h3><a href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_automaaexaeto-excelvba-produtividade-activity-7252695666588549122-c77t" target="_blank" rel="noopener">Automação de processos com Excel e VBA</a></h3><p>Como automação e uso avançado de planilhas podem reduzir esforço e melhorar processos de negócio.</p></div><a class="article-arrow" href="https://www.linkedin.com/posts/kaynan-monteiro-2a855b256_automaaexaeto-excelvba-produtividade-activity-7252695666588549122-c77t" target="_blank" rel="noopener">↗</a></article><article><p class="article-number">03</p><div><p class="article-meta">ARTIGO · PDF</p><h3>A Existência de Deus: uma análise interdisciplinar</h3><p>Uma investigação que aproxima matemática, biologia, lógica, filosofia e fé em uma reflexão autoral.</p><a class="card-link" href="meu-artigo.pdf" target="_blank">Ler o artigo ↗</a></div><a class="article-arrow" href="meu-artigo.pdf" target="_blank">↗</a></article></div></div></section>
+<section id="bonus-game" class="section-padding game-section"><div class="container animate-on-scroll"><p class="eyebrow">EXPERIMENTO INTERATIVO</p><h2>Space Dev Defense</h2><p class="section-subtitle">Uma pausa divertida: digite as palavras antes que elas atinjam sua base.</p><div class="game-container-wrapper"><div id="game-ui-bar"><div class="ui-box">Score: <span id="typer-score">0</span></div><div class="ui-box">Nível: <span id="typer-level">1</span></div></div><canvas id="typer-canvas" width="600" height="400"></canvas><div class="game-controls"><p id="game-over-message"></p><p>Digite as palavras que caem para atirar.</p><button id="start-typer-btn" class="btn-primary">Iniciar missão</button></div></div></div></section>
+<section id="contato" class="contact-section"><div class="container contact-content animate-on-scroll"><p class="eyebrow">06 / VAMOS CONSTRUIR</p><h2>Tem um problema<br>interessante?</h2><p>Se você precisa organizar um processo, transformar dados em clareza ou tirar um produto do papel, vamos conversar.</p><div class="contact-links"><a href="mailto:kaynanmont455@gmail.com" class="btn-primary">Enviar um e-mail ↗</a><a href="https://www.linkedin.com/in/kaynan-monteiro-2a855b256" target="_blank" rel="noopener" class="btn-contact-big">LinkedIn</a><a href="https://github.com/kaynanmonteiro10" target="_blank" rel="noopener" class="btn-contact-big">GitHub</a></div></div></section>
+</main>
+<footer><div class="container"><div class="footer-main"><a class="logo" href="#inicio"><span class="logo-mark">K</span><span>Kaynan<span class="logo-dot">.</span></span></a><p>Dados, automação e produtos digitais com propósito.</p><a href="https://audio.com/kaynan-monteiro" target="_blank" rel="noopener">E também música ↗</a></div><div class="footer-bottom"><span>© 2026 Kaynan Monteiro</span><span>Pindoretama · Ceará · Brasil</span><span>Feito com HTML, CSS e JavaScript</span></div></div></footer>
 
     <script>
         // 1. Rolagem Suave
@@ -510,4 +305,3 @@
 </body>
 
 </html>
-
